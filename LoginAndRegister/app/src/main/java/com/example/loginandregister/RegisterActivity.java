@@ -3,13 +3,15 @@ package com.example.loginandregister;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText etNewUsername, etNewPassword, etConfirmPassword;
+    EditText etNewUsername, etNewPassword, etConfirmPassword, etEmail, etPhone;
+
     Button btnRegister;
 
     @Override
@@ -20,6 +22,9 @@ public class RegisterActivity extends AppCompatActivity {
         etNewUsername = findViewById(R.id.etNewUsername);
         etNewPassword = findViewById(R.id.etNewPassword);
         etConfirmPassword = findViewById(R.id.etConfirmPassword);
+        etEmail = findViewById(R.id.etEmail);
+        etPhone = findViewById(R.id.etPhone);
+
         btnRegister = findViewById(R.id.btnRegister);
 
         btnRegister.setOnClickListener(v -> {
@@ -35,5 +40,10 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(this, "Register success (dummy)", Toast.LENGTH_SHORT).show();
             }
         });
+        TextView tvAlreadyHaveAccount = findViewById(R.id.tvAlreadyHaveAccount);
+        tvAlreadyHaveAccount.setOnClickListener(v -> {
+            finish();
+        });
+
     }
 }
