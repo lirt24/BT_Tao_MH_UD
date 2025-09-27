@@ -6,6 +6,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import android.content.Intent;
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -29,9 +32,10 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Login clicked: " + username, Toast.LENGTH_SHORT).show();
         });
 
-        // Sự kiện nút Register (chưa điều hướng, sẽ làm ở giai đoạn sau)
         btnGoRegister.setOnClickListener(v -> {
-            Toast.makeText(this, "Go to Register screen (not implemented yet)", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
+
     }
 }
