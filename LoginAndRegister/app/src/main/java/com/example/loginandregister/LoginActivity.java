@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(v -> {
             String username = etUsername.getText().toString();
             String password = etPassword.getText().toString();
-            Toast.makeText(this, "Login clicked: " + username, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sign In clicked: " + username, Toast.LENGTH_SHORT).show();
         });
 
         btnGoRegister.setOnClickListener(v -> {
